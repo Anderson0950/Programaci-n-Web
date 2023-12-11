@@ -1,0 +1,261 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Game</title>
+    <link href="Img/Icon/cooking_16811.png" rel="shortcut Icon"/>
+    <link href="Estilos.Css" rel="stylesheet"/>
+</head>
+
+<body class="Index">
+    <header id="Cabecera">
+        <a href="Index.html">
+            <img src="Logo.jpg" width="1120" height="252" alt="Actualiza la página">
+        </a>
+    </header>
+
+    <nav id="nav">
+        <ul class="Menu">
+            <li><a href="Index.html">Inicio</a></li>
+            <li><a href="Catalogo.html">Catálogo de productos</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="Cuerpo">
+        <h1>Bienvenido a Mundo Game</h1>
+        <p>Descubre nuestras deliciosas recetas y productos de alta calidad para cocinar fácilmente en casa.</p>
+        <a href="Catalogo.html" class="btn">Ver catálogo</a>
+    </section>
+
+    <footer id="Pie">
+        <hr>
+        <p>COPYRIGHT &copy; 2023 - COOKING EASY.</p>
+    </footer>
+</body>
+</html> 
+*/
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Game</title>
+    <link href="Img/Icon/cooking_16811.png" rel="shortcut Icon" />
+    <link href="Estilos.Css" rel="stylesheet" />
+    <style>
+        /* Estilos para el deslizador de imágenes */
+        #slider-container {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            flex: 0 0 100%;
+            width: 100%;
+        }
+
+        /* Estilos adicionales */
+        #Cuerpo {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 40px;
+        }
+
+        p {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body class="Index">
+    <header id="Cabecera">
+        <a href="Index.html">
+            <img src="LogoGame.jpeg" width="1120" height="252" alt="Actualiza la página">
+        </a>
+    </header>
+
+    <nav id="nav">
+        <ul class="Menu">
+            <li><a href="Index.html">Inicio</a></li>
+            <li><a href="Catalogo.html">Catálogo de productos</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="Cuerpo">
+        <div id="slider-container">
+            <div id="slider">
+                <div class="slide">
+                    <h1>Bienvenido a Mundo Game</h1>
+                    <p>Descubre nuestras deliciosas recetas y productos de alta calidad para cocinar fácilmente en casa.</p>
+                    <a href="Catalogo.html" class="btn">Ver catálogo</a>
+                </div>
+                <div class="slide">
+                    <h1>¡Descubre nuestras ofertas especiales!</h1>
+                    <p>Tenemos descuentos exclusivos en una amplia variedad de productos y accesorios para gamers.</p>
+                    <a href="Catalogo.html" class="btn">Explorar ofertas</a>
+                </div>
+                <div class="slide">
+                    <h1>Expande tu colección de juegos</h1>
+                    <p>Encuentra los últimos lanzamientos y los clásicos favoritos en nuestra tienda de juegos.</p>
+                    <a href="Catalogo.html" class="btn">Ver juegos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="Pie">
+        <hr>
+        <p>COPYRIGHT &copy; 2023 - COOKING EASY.</p>
+    </footer>
+
+    <script>
+        // Deslizador de imágenes
+        const slider = document.getElementById('slider');
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName('slide');
+
+        setInterval(() => {
+            slideIndex = (slideIndex + 1) % slides.length;
+            slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }, 5000);
+    </script>
+</body>
+
+</html>
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game World - Home </title>
+    <link href="icon1.jpg" rel="shortcut Icon" />
+    <link href="Estilos.css" rel="stylesheet" />
+</head>
+
+<body class="Index">
+    <header id="Cabecera">
+        <a href="Index.html">
+            <img src="OIP.jpeg" width="1120" height="252" alt="Actualiza la página">
+        </a>
+    </header>
+
+    <nav id="nav">
+        <ul class="Menu">
+            <li><a href="Index.html">Inicio</a></li>
+            <li><a href="Catalogo.html">Catálogo de juegos</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+            <li><a href="Acerca.html">Acerca</a></li>
+        </ul>
+    </nav>
+
+    <section id="Cuerpo">
+        <div id="slider-container">
+            <div class="ContentBox">
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Buscar juegos...">
+                </div>
+            <div id="slider">
+                <div class="slide">
+                    <h1>Bienvenido a Game World</h1>
+                    <p>Explora nuestro increíble mundo de juegos y sumérgete en emocionantes aventuras y desafíos.</p>
+                    <a href="Catalogo.html" class="btn">Ver catálogo</a>
+                </div>
+                <div class="slide">
+                    <h1>¡Descubre nuestras ofertas especiales!</h1>
+                    <p>Tenemos descuentos exclusivos en una amplia variedad de productos y accesorios para gamers.</p>
+                    <a href="Catalogo.html" class="btn">Explorar ofertas</a>
+                </div>
+                <div class="slide">
+                    <h1>Expande tu colección de juegos</h1>
+                    <p>Encuentra los últimos lanzamientos y los clásicos favoritos en nuestra tienda de juegos.</p>
+                    <a href="Catalogo.html" class="btn">Ver juegos</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="ContentBox">
+            
+                <div class="Box" data-title="Super Mario Bro 64">
+                <img src="Mario.jpeg" alt="Imagen 1">
+                <h3>Super Mario Bro 64</h3>
+                <p>Super Mario 64 se desarrolla dentro del Castillo de la Princesa Peach, el cual contiene 4 pisos, un sótano, un foso y un patio trasero.</p>
+                <a href="Detalles.html?id=1"> Ver más</a>
+            </div>
+                <div class="Box" data-title="Grand The Auto San Andreas">
+                <img src="SanAndrea.jpeg" alt="Imagen 2">
+                <h3>Grand The Auto San Andreas</h3>
+                <p>Juego de acción de mundo abierto en 3D de gran éxito en PC, PlayStation y plataformas móviles.</p>
+                <a href="Detalles.html?id=2"> Ver más</a>
+            </div>
+                <div class="Box" data-title="Minecraft">
+                <img src="MiniCraft.jpeg" alt="Imagen 3">
+                <h3>Minecraft</h3>
+                <p>Minecraft es un videojuego de mundo abierto donde la exploración y las construcciones son fundamentales.</p>
+                <a href="Detalles.html?id=3"> Ver más</a>
+            </div>
+                <div class="Box" data-title="RedDead Redemption II">
+                <img src="RedDead.jpeg" alt="Imagen 4">
+                <h3>RedDead Redemption II</h3>
+                <p>Red Dead Redemption 2 es un videojuego de acción-aventura western basado en el drama. </p>
+                <a href="Detalles.html?id=4"> Ver más</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="Pie">
+        <hr>
+        <p>COPYRIGHT &copy; 2023 - Game World.</p>
+    </footer>
+
+    <script> 
+                    // Deslizador de imágenes
+                    const slider = document.getElementById('slider');
+                    let slideIndex = 0;
+                    const slides = document.getElementsByClassName('slide');
+
+                    setInterval(() => {
+                    slideIndex = (slideIndex + 1) % slides.length;
+                    slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+                    }, 5000);
+
+                    const searchInput = document.getElementById('searchInput');
+    const boxes = document.querySelectorAll('.Box');
+
+    searchInput.addEventListener('input', function (e) {
+        const searchTerm = e.target.value.toLowerCase();
+        boxes.forEach(box => {
+            const title = box.getAttribute('data-title').toLowerCase();
+            if (title.includes(searchTerm)) {
+                box.style.display = 'block';
+            } else {
+                box.style.display = 'none';
+            }
+        });
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking Easy - Detalles del producto</title>
+    <link href="Estilos.Css" rel="stylesheet"/>
+</head>
+
+<body>
+    <header id="Cabecera">
+        <a href="Index.html">
+            <img src="LogoGame.jpeg" width="1120" height="252" alt="Actualiza la página">
+        </a>
+    </header>
+
+    <nav id="nav">
+        <ul class="Menu">
+            <li><a href="Index.html">Inicio</a></li>
+            <li><a href="Catalogo.html">Catálogo de productos</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="Cuerpo">
+        <h1>Detalles del producto</h1>
+        <div class="product-details">
+            <img src="Img/Productos/producto1.jpg" alt="Producto 1">
+            <h2>Producto 1</h2>
+            <p>Precio: $10</p>
+            <p>Descripción: Este es un producto delicioso y fácil de preparar. ¡No te lo pierdas!</p>
+        </div>
+    </section>
+
+    <footer id="Pie">
+        <hr>
+        <p>COPYRIGHT &copy; 2023 - COOKING EASY.</p>
+    </footer>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game World - Detalles del producto</title>
+    <link href="icon1.jpg" rel="shortcut Icon" />
+    <link href="Estilosdetalles.Css" rel="stylesheet" />
+</head>
+
+<body>
+    <header id="Cabecera">
+        <a href="Index.html">
+            <img src="OIP.jpeg" width="1120" height="252" alt="Actualiza la página">
+        </a>
+    </header>
+
+    <nav id="nav">
+        <ul class="Menu">
+            <li><a href="Index.html">Inicio</a></li>
+            <li><a href="Catalogo.html">Catálogo de productos</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section id="Cuerpo">
+        <h1>Detalles del producto</h1>
+        <div class="product-details">
+            <img src="Img/Productos/producto1.jpg" alt="Producto 1" id="product-image">
+            <h2 id="product-name">Producto 1</h2>
+            <p id="product-price">Precio: $10</p>
+            <p id="product-description">Descripción: Este es un producto delicioso y fácil de preparar. ¡No te lo pierdas!</p>
+        </div>
+    </section>
+
+    <footer id="Pie">
+        <hr>
+        <p>COPYRIGHT &copy; 2023 - Game World.</p>
+    </footer>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        const productDetails = document.querySelector('.product-details');
+        const productImage = document.querySelector('#product-image');
+
+        if (productId) {
+            // Aquí puedes agregar lógica para cargar los detalles del producto según el ID
+            // Puedes obtener la información de una base de datos o un archivo JSON, y luego actualizar los elementos en la sección de detalles del producto
+            // Por ahora, los detalles se muestran estáticamente en el HTML
+
+            // Ejemplo de carga de detalles del producto
+            if (productId === '1') {
+                productImage.src = 'Mario.jpeg';
+                productDetails.querySelector('#product-name').textContent = 'Super Mario Bro 64';
+                productDetails.querySelector('#product-price').textContent = 'Precio: $10';
+                productDetails.querySelector('#product-description').textContent = 'Descripción: Este es un juego clásico de plataformas protagonizado por Mario.';
+            } else if (productId === '2') {
+                productImage.src = 'SanAndrea.jpeg';
+                productDetails.querySelector('#product-name').textContent = 'Grand The Auto San Andreas';
+                productDetails.querySelector('#product-price').textContent = 'Precio: $25';
+                productDetails.querySelector('#product-description').textContent = 'Descripción: Un famoso juego de mundo abierto en el que puedes explorar una ciudad virtual.';
+            } else if (productId === '3') {
+                productImage.src = 'MiniCraft.jpeg';
+                productDetails.querySelector('#product-name').textContent = 'Minecraft';
+                productDetails.querySelector('#product-price').textContent = 'Precio: $30';
+                productDetails.querySelector('#product-description').textContent = 'Descripción: Un juego de construcción y aventura en un mundo de bloques.';
+            } else if (productId === '4') {
+                productImage.src = 'RedDead.jpeg';
+                productDetails.querySelector('#product-name').textContent = 'RedDead Redemption II';
+                productDetails.querySelector('#product-price').textContent = 'Precio: $20';
+                productDetails.querySelector('#product-description').textContent = 'Descripción: Un juego de acción y aventura en el salvaje oeste.';
+            }
+        }
+    </script>
+</body>
+
+</html>
+

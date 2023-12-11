@@ -1,0 +1,47 @@
+<!-- Agrega los scripts de Firebase -->
+<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js"></script>
+
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyD_vM7Ms7IBAgyhMV5wrvCgSMNJXrJ-6tg",
+        authDomain: "https://console.firebase.google.com/u/0/project/prueba-web-89320/settings/general?hl=es-419",
+        databaseURL: "https://console.firebase.google.com/u/0/project/prueba-web-89320/settings/general?hl=es-419",
+        projectId: "test-web-89320",
+        storageBucket: "gs://prueba-web-89320.appspot.com",
+        messagingSenderId: "TU_SENDER_ID",
+        appId: "TU_APP_ID"
+    };
+    
+    firebase.initializeApp(firebaseConfig);
+    const database = firebase.database();
+</script>
+
+<form id="contactForm">
+    <input type="text" id="name" placeholder="Nombre" required><br>
+    <input type="email" id="email" placeholder="Correo electrónico" required><br>
+    <textarea id="message" placeholder="Mensaje" required></textarea><br>
+    <button type="submit">Enviar</button>
+</form>
+
+<script>
+    const contactForm = document.getElementById('contactForm');
+    
+    contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Guardar datos en Firebase
+        database.ref('contactos').push({
+            nombre: name,
+            correo: email,
+            mensaje: message
+        });
+
+        contactForm.reset();
+        alert('Mensaje enviado con éxito');
+    });
+</script>
